@@ -1,6 +1,5 @@
 # cs_courses_berkeley
-This repo contains project files from all upper division CS courses Andrew Huynh has taken at University of California, Berkeley.
-
+This repo contains project files from upper division CS courses Andrew Huynh has taken at University of California, Berkeley.
 These courses are:
 * CS 160 User Interface Design and Development
 * CS 161 Computer Security
