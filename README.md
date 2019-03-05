@@ -1,4 +1,4 @@
-# cs_course_berkeley
+# cs_courses_berkeley
 This repo contains project files from all upper division CS courses Andrew Huynh has taken at UC Berkeley.
 
 These courses are:
