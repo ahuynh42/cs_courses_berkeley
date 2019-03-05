@@ -1,0 +1,5 @@
+Describe (in 2-3 paragraphs) your evasion strategy:
+
+I followed the idea seen in lecture. I split msg into characters and send those to the server with increasing seq numbers. At the same time, I send random characters with the same increasing seq numbers but with a shorter ttl that does not make it to the server. After I finish sending the characters in msg, I filter out ICMP packets received and concstruct the overall payload by concatenating the payloads of the remaining packets received from the server.
+
+Sending the random characters with the same seq numbers helps to get past the firewall. Even if the firewall puts together characters that I’m sending to the server, there’s an extremely high probability that the firewall will see some of the random characters before the actual characters in msg. So the firewall will see it as random gibberish and let it through. Since the random characters have a shorter ttl that does not make it to the server, the server will not see these random characters. So the server will put the packets it does receive together and will see msg properly.

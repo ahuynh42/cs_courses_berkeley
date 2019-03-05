@@ -1,0 +1,82 @@
+WriteJournalIntent write journal
+WriteJournalIntent write in journal
+WriteJournalIntent write journal entry
+WriteJournalIntent write a journal entry
+NewSentenceIntent new sentence {awesome|Sentence}
+NewSentenceIntent new sentence {bad|Sentence}
+NewSentenceIntent new sentence {fun|Sentence}
+NewSentenceIntent new sentence {great|Sentence}
+NewSentenceIntent new sentence {good|Sentence}
+NewSentenceIntent new sentence {horrible|Sentence}
+NewSentenceIntent new sentence {long|Sentence}
+NewSentenceIntent new sentence {sad|Sentence}
+NewSentenceIntent new sentence {sad|Sentence}
+NewSentenceIntent new sentence {awesome day|Sentence}
+NewSentenceIntent new sentence {bad day|Sentence}
+NewSentenceIntent new sentence {fun day|Sentence}
+NewSentenceIntent new sentence {great day|Sentence}
+NewSentenceIntent new sentence {good day|Sentence}
+NewSentenceIntent new sentence {horrible day|Sentence}
+NewSentenceIntent new sentence {long day|Sentence}
+NewSentenceIntent new sentence {sad day|Sentence}
+NewSentenceIntent new sentence {today was awesome|Sentence}
+NewSentenceIntent new sentence {today was bad|Sentence}
+NewSentenceIntent new sentence {today was fun|Sentence}
+NewSentenceIntent new sentence {today was great|Sentence}
+NewSentenceIntent new sentence {today was good|Sentence}
+NewSentenceIntent new sentence {today was horrible|Sentence}
+NewSentenceIntent new sentence {today was long|Sentence}
+NewSentenceIntent new sentence {today was sad|Sentence}
+NewSentenceIntent new sentence {I went to class|Sentence}
+NewSentenceIntent new sentence {I went to school|Sentence}
+NewSentenceIntent new sentence {I went to work|Sentence}
+NewSentenceIntent new sentence {today was my birthday|Sentence}
+NewSentenceIntent new sentence {I had eggs for breakfast|Sentence}
+NewSentenceIntent new sentence {I finished all my work today|Sentence}
+NewSentenceIntent new sentence {my friend got me this neat gift|Sentence}
+NewSentenceIntent new sentence {I watched this awesome movie earlier this evening|Sentence}
+NewSentenceIntent new sentence {I went to the amusement park with friends today|Sentence}
+NewSentenceIntent new sentence {I went shopping for a gift for my friend today|Sentence}
+FinishEntryIntent finish entry
+FinishEntryIntent finish journal
+FinishEntryIntent finish journal entry
+ReadJournalIntent {Month} {Day}
+ReadJournalIntent read on {Date}
+ReadJournalIntent read from {Date}
+ReadJournalIntent read journal on {Date}
+ReadJournalIntent read journal from {Date}
+ReadJournalIntent read journal entry on {Date}
+ReadJournalIntent read journal entry from {Date}
+ReadNoDateIntent read journal
+ReadNoDateIntent read journal entry
+ReadNoDateIntent read a journal entry
+MusicIntent music
+MusicIntent play music
+MusicIntent play some music
+NoiseIntent white noise
+NoiseIntent play white noise
+NoiseIntent play some white noise
+RestartIntent restart steps
+RepeatIntent repeat step
+RepeatIntent repeat that
+RepeatIntent repeat that step
+NextIntent next step
+PrevIntent previous step
+PrevIntent last step
+BreathIntent breathing exercise
+BreathIntent breathing exercises
+BreathIntent do breathing exercises
+BreathIntent do a breathing exercise
+SnoreIntent anti snoring exercise
+SnoreIntent anti snoring exercises
+SnoreIntent do anti snoring exercises
+SnoreIntent do an anti snoring exercise
+MainMenuIntent yes continue
+MainMenuIntent main menu
+MainMenuIntent go to main menu
+MainMenuIntent go to the main menu
+EndIntent no don't continue
+EndIntent no end
+HelpMeIntent help
+HelpMeIntent help me
+HelpMeIntent what can I do

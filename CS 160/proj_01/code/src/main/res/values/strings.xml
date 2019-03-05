@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Calorie Calculator</string>
+
+    <string-array name="Exercises">
+        <item></item>
+        <item>Pushups</item>
+        <item>Situps</item>
+        <item>Squats</item>
+        <item>Leg-Lifts</item>
+        <item>Planking</item>
+        <item>Jumping Jacks</item>
+        <item>Pullups</item>
+        <item>Cycling</item>
+        <item>Walking</item>
+        <item>Jogging</item>
+        <item>Swimming</item>
+        <item>Stair-Climbing</item>
+    </string-array>
+
+    <string-array name="Weight">
+        <item></item>
+        <item>100-110</item>
+        <item>110-120</item>
+        <item>120-130</item>
+        <item>130-140</item>
+        <item>140-150</item>
+        <item>150-160</item>
+        <item>160-170</item>
+        <item>170-180</item>
+        <item>180-190</item>
+        <item>190-200</item>
+    </string-array>
+
+    <string-array name="Gender">
+        <item></item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

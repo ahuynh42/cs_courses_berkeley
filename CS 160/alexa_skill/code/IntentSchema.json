@@ -1,0 +1,72 @@
+{
+  "intents": [
+    {
+      "intent": "WriteJournalIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "Sentence",
+          "type": "AMAZON.LITERAL"
+        }
+      ],
+      "intent": "NewSentenceIntent"
+    },
+    {
+      "intent": "FinishEntryIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "Date",
+          "type": "AMAZON.DATE"
+        },
+        {
+          "name": "Month",
+          "type": "Month"
+        },
+        {
+          "name": "Day",
+          "type": "Day"
+        }
+      ],
+      "intent": "ReadJournalIntent"
+    },
+    {
+      "intent": "ReadNoDateIntent"
+    },
+    {
+      "intent": "MusicIntent"
+    },
+    {
+      "intent": "NoiseIntent"
+    },
+    {
+      "intent": "RestartIntent"
+    },
+    {
+      "intent": "RepeatIntent"
+    },
+    {
+      "intent": "NextIntent"
+    },
+    {
+      "intent": "PrevIntent"
+    },
+    {
+      "intent": "BreathIntent"
+    },
+    {
+      "intent": "SnoreIntent"
+    },
+    {
+      "intent": "MainMenuIntent"
+    },
+    {
+      "intent": "EndIntent"
+    },
+    {
+      "intent": "HelpMeIntent"
+    }
+  ]
+}

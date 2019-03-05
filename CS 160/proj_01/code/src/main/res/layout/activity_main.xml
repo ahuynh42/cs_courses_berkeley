@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="andrewhuynh.caloriecalculator.MainActivity">
+
+        <TextView
+            android:text="Hello and welcome to the Calorie Calculator app. Here you can calculate the number of calories you have burned doing certain exercises. You can also determine how much of an alternative exercise you need to do to burn the same number of calories. As a bonus feature, you can enter the amount of calories you want to burn and calculate how much of certain exercises you have to do to burn that many calories!"
+            android:textSize="24sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/intro"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Select your exercise: "
+            android:textSize="21sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/description1"
+            android:layout_marginTop="50dp"
+            tools:text="Select your exercise:"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/intro" />
+
+        <Spinner
+            android:textSize="21sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exercise1"
+            app:spinnerMode="dropdown"
+            android:entries="@array/Exercises"
+            android:layout_alignBaseline="@+id/description1"
+            android:layout_toEndOf="@+id/description1" />
+
+        <TextView
+            android:text="Enter number of reps/minutes: "
+            android:textSize="21sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Enter number of reps/minutes:"
+            android:id="@+id/description2"
+            android:layout_below="@+id/description1"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:textSize="21sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/input1"
+            android:hint="reps/minutes"
+            android:selectAllOnFocus="false"
+            android:layout_toEndOf="@+id/description2"
+            android:layout_alignBaseline="@+id/description2" />
+
+        <Button
+            android:textSize="24sp"
+            android:text="Calculate Calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calculate1"
+            android:layout_below="@+id/description2"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="Ready when you are."
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/result1"
+            tools:text="Ready when you are."
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/calculate1" />
+
+        <TextView
+            android:text="You could have alternatively done: "
+            android:textSize="21sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/description3"
+            tools:text="You could have alternatively done:"
+            android:layout_below="@+id/result1"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:textSize="21sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exercise2"
+            android:entries="@array/Exercises"
+            app:spinnerMode="dropdown"
+            android:layout_toEndOf="@+id/description3"
+            android:layout_alignBaseline="@+id/description3" />
+
+        <Button
+            android:textSize="24sp"
+            android:text="Calculate Alternative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calculate2"
+            tools:text="Calculate Alternative"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/description3"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:text="Ready when you are."
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/result2"
+            tools:text="Ready when you are."
+            android:layout_below="@+id/calculate2"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:textSize="21sp"
+            android:text="Enter number of calories: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/description4"
+            tools:text="Enter number of calories:"
+            android:layout_below="@+id/result2"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:textSize="21sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/input2"
+            android:hint="calories"
+            android:layout_toEndOf="@+id/description4"
+            android:layout_alignBaseline="@+id/description4" />
+
+        <TextView
+            android:textSize="21sp"
+            android:text="You need to do: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/description5"
+            tools:text="You need to do:"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/description4"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:textSize="21sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exercise3"
+            android:entries="@array/Exercises"
+            app:spinnerMode="dropdown"
+            android:layout_toEndOf="@+id/description5"
+            android:layout_alignBaseline="@+id/description5" />
+
+        <Button
+            android:textSize="24sp"
+            android:text="Calculate Amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calculate3"
+            tools:text="Calculate Amount"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/description5" />
+
+        <TextView
+            android:text="Ready when you are."
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/result3"
+            tools:text="Ready when you are."
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/calculate3" />
+
+    </RelativeLayout>
+
+</ScrollView>

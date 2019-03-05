@@ -1,0 +1,85 @@
+{
+  "intents": [
+    {
+      "intent": "EmergencyIntent",
+      "slots": [
+        {
+          "name": "Emergency",
+          "type": "LIST_OF_EMERGENCIES"
+        }
+      ]
+    },
+    {
+      "intent": "HelpMeIntent"
+    },
+    {
+      "intent": "InjuredAdultIntent"
+    },
+    {
+      "intent": "IllAdultIntent"
+    },
+    {
+      "intent": "ChokingIntent"
+    },
+    {
+      "intent": "CPRIntent"
+    },
+    {
+      "intent": "AEDIntent"
+    },
+    {
+      "intent": "BleedingIntent"
+    },
+    {
+      "intent": "BurnsIntent"
+    },
+    {
+      "intent": "PoisonIntent"
+    },
+    {
+      "intent": "InjuriesIntent"
+    },
+    {
+      "intent": "NeckInjuryIntent"
+    },
+    {
+      "intent": "SpinalInjuryIntent"
+    },
+    {
+      "intent": "StrokeIntent"
+    },
+     {
+      "intent": "ConsciousIntent"
+    },
+    {
+      "intent": "UnconsciousIntent"
+    },
+    {
+      "intent": "ExplainCompressionsIntent"
+    },
+    {
+      "intent": "ExplainBreathsIntent"
+    },
+    {
+      "intent": "RestartCompressionsIntent"
+    },
+    {
+      "intent": "RestartBreathsIntent"
+    },
+    {
+      "intent": "StopIntent"
+    },
+    {
+      "intent": "YesStopIntent"
+    },
+    {
+      "intent": "NoStopIntent"
+    },
+    {
+      "intent": "ReadyIntent"
+    },
+    {
+      "intent": "DoneIntent"
+    }
+  ]
+}
