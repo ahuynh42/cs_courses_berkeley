@@ -1,5 +1,4 @@
 # CS 168 Introduction to the Internet: Architecture and Protocols
-## proj1_routing
+## proj1-Distance-Vector-Routing
 
----
-## proj2_transport
+## proj2-TCP-Transport

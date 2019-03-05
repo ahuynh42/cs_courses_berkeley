@@ -1,8 +1,6 @@
 # CS 160 User Interface Design and Development
-## alexa_skill
+## design_final-Alexa-Skill
 
----
-## proj_01
+## proj_01-Calorie-Calculator-Android
 
----
-## proj_02
+## proj_02-First-Aid-Alexa-Skill

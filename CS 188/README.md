@@ -1,17 +1,12 @@
 # CS 188 Introduction to Artificial Intelligence
 ## machine_learning
 
----
-## multiagent
+## multi_agent
 
----
-## PacPack v2.0
+## PacPack
 
----
 ## reinforcement
 
----
 ## search
 
----
-## tracking_sp16
+## tracking

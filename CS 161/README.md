@@ -1,14 +1,10 @@
 # CS 161 Computer Security
-## proj1
-
----
 ## proj1_submit
 
----
-## proj2
+## proj1-Security-Vulnerabilities
 
----
-## proj3
+## proj2-Secure-File-Store
 
----
 ## proj3_submit
+
+## proj3-Great-Firewall-of-China
