@@ -1,0 +1,1 @@
+For convenience the implemented code for the project models.py, nn.py, and perceptron.py have been copied to this directory. They can be found in /machine_learning/. The remaining files are framework for the project and are as given.

@@ -1,0 +1,1 @@
+For convenience the code for the app MainActivity.java has been copied to this directory. It can be found in /code/src/main/java/andrewhuynh/caloriecalculator. The remaining files are framework for the app that were auto-generated.

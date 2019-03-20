@@ -1,0 +1,1 @@
+For convenience the implemented code for the project multiAgents.py has been copied to this directory. It can be found in /multi_agent/. The remaining files are framework for the project and are as given.

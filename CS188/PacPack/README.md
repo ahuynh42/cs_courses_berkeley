@@ -1,0 +1,1 @@
+For convenience the implemented code for the project myAgentP1.py, myAgentP2.py, and myAgentP3.py have been copied to this directory. They can be found in /PacPack/. The remaining files are framework for the project and are as given.
