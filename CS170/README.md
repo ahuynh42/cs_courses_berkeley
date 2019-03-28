@@ -1,3 +1,6 @@
 # CS170 Efficient Algorithms and Intractable Problems
-In this course I learned about
+In this course I learned about classic algorithms and running times. These include graph search algorithms (DFS, BFS, A*), dynamic programming, optimum search trees, and balanced trees. I also learned about NP, NP-Complete, and NP-Hard problems.
 ## horse
+This is a NP-Hard problem that the course designed for a project. The context is that we are given a group of horses and need to race them in teams. Each horse has a performance rating and a list of horses that it is okay running after in the same team. A team's overall performance is the sum of it's members ratings multiplied by the length of the team. All horses must be used and multiple teams may be created, with each horse only being in a single team. The final score for a group of horses is the sum of all the teams' ratings.
+
+The problem is essentially a longest path problem where each horse is vertex and edges are drawn from a horse to another horse that it is okay running after in the same team. I developed two greedy algorithms and a random walk algorithm to determine optimal teams. In combination, the three algorithms performed extremely well on given test files.
